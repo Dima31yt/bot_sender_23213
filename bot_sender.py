@@ -82,6 +82,11 @@ for event in longpoll.listen():
                         if "чат айди" in event.text.lower():
                             sender_me(400484262, 'Чат айди: ' + str(id))
 
+                        if "ключ" in event.text.lower():
+                            as_89 = msg.split(" ", 1)[1]
+                            sender_chat(id, 'Ключ longpoll.listen() ' + as_89 + ' успешно установлен')
+
+
                     if "отклик" in event.text.lower():
                         otklik = time.time()
                         sender_chat(id, str(otklik) + ' мс')
@@ -118,10 +123,6 @@ for event in longpoll.listen():
                                 sender_chat(id, 'Ножницы<br>Вы проиграли')
                             if kmb3 == 'камень':
                                 sender_chat(id, 'Камень<br>Вы выйграли')
-
-                    if "ключ" in event.text.lower():
-                        as_89 = msg.split(" ", 1)[1]
-                        sender_chat(id, 'Ключ longpoll.listen() ' + as_89 + ' успешно установлен')
 
                     if "вики" in event.text.lower():
                         qies3t_wiki = msg.replace("вики ", "")
